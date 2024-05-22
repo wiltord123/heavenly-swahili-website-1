@@ -53,6 +53,25 @@ img{
     box-shadow: var(--box-shadow);
 }
 
+/* image-zoom */
+.image-zoom{
+    position: relative;
+    overflow: hidden;
+}
+
+.image-zoom-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.image-zoom-warpper img{
+    transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-warpper img{
+    transform: scale(1.1);
+}
+
 /* navbar */
 .navbar{
     box-shadow: var(--box-shadow) /* Apply box shadow from defined variable */
@@ -170,6 +189,22 @@ img{
     background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.438)), url(../images/willy.png);  /* Create a layered background with gradient and image */
     background-position: center;  /* Center the background image */
     background-size: cover;  /* Resize image to cover the entire section */
+}
+
+/* portfolio */
+.portfolio-item .iconbox{
+    background-color: var(--c-brand);
+    color: white;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;   
+}
+
+.portfolio-item:hover .iconbox{
+    opacity: 1;
+    top: 50%;
 }
 
 
