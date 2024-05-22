@@ -9,7 +9,7 @@
     --c-brand-rgb: 78, 87, 212;  /* Brand blue color in RGB format */
     --c-body: #727272;  /* Body text color */
     --font-base: "clashdisplay", sans-serif;  /* Base font family */
-    --box-shadow: 0px 15px 25px rgba(90, 87, 87, 0.8);  /* Box shadow definition */
+    --box-shadow: 0px 15px 25px rgb(215, 213, 213);  /* Box shadow definition */
     --transition:all 0.5s ease;  /* Default transition animation for smooth effects */
   }
 
@@ -163,6 +163,13 @@ img{
 .service:hover .iconbox {
     background: rgba(255,255,255,0.2);  /* Set background color with transparency on hover */
     color: white;  /* Change icon color to white on hover */
+}
+
+/* counter */
+#counter{
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.438)), url(../images/willy.png);  /* Create a layered background with gradient and image */
+    background-position: center;  /* Center the background image */
+    background-size: cover;  /* Resize image to cover the entire section */
 }
 
 
