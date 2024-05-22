@@ -1,117 +1,168 @@
+/* Import additional styles from another CSS file */
 @import url(../css/clash-display.css);
 
+/* Define global variables for colors, fonts, etc. */
 :root {
-    --c-dark: #212529;
-    --c-brand: #4e57d4;
-    --c-brand-light: #6970dd; /* Light blue color, adjusted */
-    --c-brand-rgb: 78, 87, 212;
-    --c-body: #727272;
-    --font-base: "clashdisplay", sans-serif;
-    --box-shadow: 0px 15px 25px rgba(90, 87, 87, 0.8);
-    --transition:all 0.5s ease;
+    --c-dark: #212529;  /* Dark color */
+    --c-brand: #4e57d4;  /* Brand blue color */
+    --c-brand-light: #6970dd;  /* Light blue color, adjusted */
+    --c-brand-rgb: 78, 87, 212;  /* Brand blue color in RGB format */
+    --c-body: #727272;  /* Body text color */
+    --font-base: "clashdisplay", sans-serif;  /* Base font family */
+    --box-shadow: 0px 15px 25px rgba(90, 87, 87, 0.8);  /* Box shadow definition */
+    --transition:all 0.5s ease;  /* Default transition animation for smooth effects */
   }
+
+  /* Set styles for the body element */
 body{
-    font-family: var(--font-base);
-    line-height: 1.7;
-    color: var(--c-body);
+    font-family: var(--font-base);  /* Set base font family from variable */
+    line-height: 1.7;  /* Set line spacing for body text */
+    color: var(--c-body);  /* Set default body text color */
 }
 
+/* Style all heading elements (h1 to h6) and their class counterparts (.h1, .h2, etc.) */
 h1, h2, h3, h4, h5, h6
 .h1, .h2, .h3, .h4, .h5, .h6{
-    font-weight: 600;
-    color: var(--c-dark);
+    font-weight: 600;  /* Set font weight for headings */
+    color: var(--c-dark);  /* Set color for headings */
 }
 
+/* Style anchor tags (links) */
 a{
-    text-decoration: none;
-    color: var(--c-brand);
-    transition: var(--transition);
+    text-decoration: none;  /* Remove underline from links */
+    color: var(--c-brand);  /* Set default link color */
+    transition: var(--transition);  /* Apply default transition animation */
 }
 
-a:hover{ color: var(--c-brand-light);}
+a:hover{ color: var(--c-brand-light);}  /* Change link color on hover */
 
+/* Style all image elements */
 img{
-    max-width: 100%;
-    height: auto;
+    max-width: 100%;  /* Set maximum width to 100% */
+    height: auto;  /* Maintain aspect ratio for images */
 }
 
+/* Style sections with padding (likely for spacing) */
 .section-padding{
     padding-top: 140px;
     padding-bottom: 140px;
 }
 
-/* navbar */
-.navbar{
-    box-shadow: var(--box-shadow)
+/* Style elements with the "theme-shadow" class (likely for a box shadow effect) */
+.theme-shadow{
+    box-shadow: var(--box-shadow);
 }
 
+/* navbar */
+.navbar{
+    box-shadow: var(--box-shadow) /* Apply box shadow from defined variable */
+}
+
+/* Styles for the navigation bar (.navbar) */
 .navbar-nav .nav-link{
-    font-weight: 500;
-    color: var(--c-brand-rgb);
+    font-weight: 500;  /* Set font weight for navigation links */
+    color: var(--c-brand-rgb);  /* Set color for navigation links using RGB format */
 }
 
 .navbar-nav .nav-link.active{
-    color: var(--c-brand);
+    color: var(--c-brand);  /* Change color for active navigation link */
 }
 
-/* button */
+/* Styles for buttons (.btn) */
 .btn{
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    border-radius: 20px;
-    padding: 10px 24px;
+    font-weight: 600;  /* Set font weight for buttons */
+    font-size: 14px;  /* Set font weight for buttons */
+    text-transform: uppercase;  /* Convert button text to uppercase */
+    border-radius: 20px;  /* Set rounded corners for buttons */
+    padding: 10px 24px;  /* Set padding for buttons */
 }
 
 .btn-brand{
-    background-color: var(--c-brand);
-    border-bottom: var(--c-brand);
-    color: white;
+    background-color: var(--c-brand);  /* Set background color for brand buttons */
+    border-bottom: var(--c-brand);  /* Set border color for brand buttons */
+    color: white;  /* Set text color for brand buttons */
 }
 
+/* Styles for buttons on hover (.btn-brand:hover) */
 .btn-brand:hover{
-    background-color: var(--c-brand-light);
-    border-color: var(--c-brand-light);
-    color: white
+    background-color: var(--c-brand-light);  /* Change background color on hover */
+    border-color: var(--c-brand-light);  /* Change border color on hover (matches background) */
+    color: white  /* Maintain white text color on hover */
 }
 
-/* HERO */
+/* Styles for the hero section (#hero) */
 #hero{
-    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/background.png);
-    background-position: center;
-    background-size: cover;
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.507), rgba(var(--c-brand-rgb), 0.438)), url(../images/background.png);  /* Create a layered background with gradient and image */
+    background-position: center;  /* Center the background image */
+    background-size: cover;  /* Resize image to cover the entire section */
+
 }
 
-/* section title */
+/* Styles for section titles (.section-title) */
 .section-title {
-    margin-bottom: 60px;
+    margin-bottom: 60px;  /* Add spacing below the section title */
 }
 
 .section-title .line{
-    width: 60px;
-    height: 4px;
-    background-color: var(--c-brand);
-    margin: 16px auto 24px auto;
+    width: 60px;  /* Set width for the horizontal line below the title */
+    height: 4px;  /* Set height for the horizontal line */
+    background-color: var(--c-brand);  /* Set background color of the line */
+    margin: 16px auto 24px auto;  /* Set margins for the line (top, right, bottom, left) */
 }
 
 .section-title p{
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 500px;  /* Set maximum width for the paragraph text */
+    margin-left: auto;  /* Center the paragraph text horizontally */
+    margin-right: auto;  /* Center the paragraph text horizontally */
 }
 
-/* icon box */
+/* Styles for icon boxes (.iconbox) */
 .iconbox{
-    width: 70px;
-    height: 70px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(var(--c-brand-rgb), 0.1);
-    color: var(--c-brand);
-    font-size: 44px;
-    /* to not be afect by flex */
-    flex: none;
+    width: 70px;  /* Set width for the icon box */
+    height: 70px;  /* Set height for the icon box */
+    display: inline-flex;  /* Display the icon box as an inline-flex element */
+    align-items: center;  /* Align content vertically within the icon box */
+    justify-content: center;  /* Align content horizontally within the icon box */
+    background: rgba(var(--c-brand-rgb), 0.1);  /* Set background color with transparency */
+    color: var(--c-brand);  /* Set icon color */
+    font-size: 44px;  /* Set font size for the icon */
+    flex: none;  /* Prevent the icon box from shrinking/growing with flexbox */
+}
+
+/* Styles for service sections (.service) */
+.service{
+    position: relative;  /* Set the position to relative for proper layering */
+    overflow: hidden;  /* Hide overflowing content (might be useful for specific effects) */
+    z-index: 2;  /* Set stacking order to ensure elements appear above others */
+}
+
+.service::after {
+    content: "";  /* Add an empty pseudo-element for styling */
+    width: 40px;  /* Set width for the pseudo-element */
+    height: 40px;  /* Set height for the pseudo-element */
+    background-color: rgba(var(--c-brand-rgb), 0.2); /* Set background color with transparency */
+    position: absolute;  /* Set absolute position for the pseudo-element */
+    bottom: 0;  /* Position the pseudo-element at the bottom */
+    right: 0;  /* Position the pseudo-element at the right */
+    transition: var(--transition);  /* Apply transition animation for smooth effect */
+  }
+
+.service:hover::after{
+    width: 100%;  /* Expand to cover the entire service section on hover */
+    height: 100%;   /* Expand to cover the entire service section on hover */
+    background: var(--c-brand);  /* Change background color to brand blue on hover */
+    z-index: -1;/* Set stacking order below other elements within the service section */
+}
+
+.service:hover h5,
+.service:hover p{
+    color: white;  /* Change heading (h5) and paragraph text color to white on hover */
+}
+
+/* Corrected selector for hover state of the icon box */
+.service:hover .iconbox {
+    background: rgba(255,255,255,0.2);  /* Set background color with transparency on hover */
+    color: white;  /* Change icon color to white on hover */
 }
 
 
