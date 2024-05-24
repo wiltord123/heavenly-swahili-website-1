@@ -274,6 +274,13 @@ img{
     border-color: var(--c-brand);
 }
 
+/* footer */
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7);
+}
+
 
 
 
