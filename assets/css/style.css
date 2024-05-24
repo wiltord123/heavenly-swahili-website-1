@@ -281,6 +281,12 @@ footer a {
     color: rgba(255,255,255,0.7);
 }
 
+footer ul{
+    list-style: none;
+    padding: 0;
+    
+}
+
 
 
 
