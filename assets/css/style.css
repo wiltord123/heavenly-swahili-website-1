@@ -228,6 +228,13 @@ img{
     transform: rotate(45deg);
 }
 
+/* TEAM */
+.Team-member-content{
+    background-color: var(--c-brand);
+    position: absolute;
+    bottom: 24px;
+}
+
 
 
 
