@@ -284,9 +284,13 @@ footer a {
 footer ul{
     list-style: none;
     padding: 0;
-    
 }
 
+footer .line{
+    width: 40px;
+    height: 4px;
+    background-color: var(--c-brand);
+}
 
 
 
